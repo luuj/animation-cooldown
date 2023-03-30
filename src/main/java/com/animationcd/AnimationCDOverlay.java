@@ -1,25 +1,13 @@
-package net.runelite.client.plugins.animationcd;
+package com.animationcd;
 
-import net.runelite.client.ui.overlay.OverlayPosition;
-import net.runelite.client.ui.overlay.Overlay;
-import net.runelite.client.ui.overlay.OverlayUtil;
-import net.runelite.client.ui.FontManager;
 import net.runelite.api.Client;
 import net.runelite.api.Perspective;
-import net.runelite.api.Point;
 import net.runelite.api.coords.LocalPoint;
-import javax.inject.Inject;
-
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Font;
-import net.runelite.client.ui.overlay.OverlayLayer;
-import net.runelite.client.ui.overlay.OverlayPriority;
+import net.runelite.client.ui.FontManager;
+import net.runelite.client.ui.overlay.*;
 
 import javax.inject.Inject;
 import java.awt.*;
-import static net.runelite.api.MenuAction.RUNELITE_OVERLAY_CONFIG;
-import static net.runelite.client.ui.overlay.OverlayManager.OPTION_CONFIGURE;
 
 
 

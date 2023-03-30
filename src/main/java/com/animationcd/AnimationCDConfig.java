@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.animationcd;
+package com.animationcd;
 
 import net.runelite.client.config.*;
 

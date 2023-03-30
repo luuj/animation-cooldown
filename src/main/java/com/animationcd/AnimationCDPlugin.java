@@ -1,33 +1,28 @@
-package net.runelite.client.plugins.animationcd;
+package com.animationcd;
 
 import com.google.inject.Provides;
-import javax.inject.Inject;
-
 import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.kit.KitType;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
+import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.game.ItemManager;
+import net.runelite.client.input.KeyManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.http.api.item.ItemEquipmentStats;
 import net.runelite.http.api.item.ItemStats;
-import net.runelite.client.events.ConfigChanged;
-import java.awt.Color;
-import java.awt.Dimension;
-import net.runelite.client.input.KeyManager;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.inject.Inject;
+import java.awt.*;
 
 
 @PluginDescriptor(
-	name = "AnimationCD"
+	name = "<html><font color=#b82584>[J] AnimationCD"
 )
 public class AnimationCDPlugin extends Plugin
 {
@@ -209,7 +204,6 @@ public class AnimationCDPlugin extends Plugin
 				case 8291: //dragon knife spec
 				case 8292: //dragon knife spec
 				case 7521: //throwaxe spec
-				case 5061: //bp
 				case 7554: //darts
 				case 9168: //zaryte crossbow
 				case 1074: //msb spec
