@@ -1,4 +1,4 @@
-package com.animationcd;
+package net.runelite.client.plugins.animationcd;
 
 import net.runelite.client.config.*;
 
@@ -42,24 +42,8 @@ public interface AnimationCDConfig extends Config
 	)
 	String tickSettings = "tickSettings";
 
-	@Range(
-			min = 8,
-			max = 50
-	)
 	@ConfigItem(
 			position = 4,
-			keyName = "fontSize",
-			name = "Font Size",
-			description = "Change the font size of the overhead Tick Number",
-			section = tickSettings
-	)
-	default int fontSize()
-	{
-		return 15;
-	}
-
-	@ConfigItem(
-			position = 5,
 			keyName = "countColor",
 			name = "Tick Number Color",
 			description = "Configures the color of tick number",
@@ -69,5 +53,23 @@ public interface AnimationCDConfig extends Config
 	{
 		return Color.CYAN;
 	}
+
+	@Range(
+			min = 8,
+			max = 50
+	)
+	@ConfigItem(
+			position = 5,
+			keyName = "fontSize",
+			name = "Text Size",
+			description = "Change the font size of the overhead tick number",
+			section = tickSettings
+	)
+	default int fontSize()
+	{
+		return 15;
+	}
+
+
 
 }

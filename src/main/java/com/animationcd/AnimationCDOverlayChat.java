@@ -1,4 +1,4 @@
-package com.animationcd;
+package net.runelite.client.plugins.animationcd;
 
 import net.runelite.api.Client;
 import net.runelite.client.ui.overlay.OverlayMenuEntry;

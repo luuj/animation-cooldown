@@ -1,28 +1,36 @@
-package com.animationcd;
+package net.runelite.client.plugins.animationcd;
 
 import com.google.inject.Provides;
+import javax.inject.Inject;
+
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
 import net.runelite.api.events.AnimationChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.kit.KitType;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
-import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.game.ItemManager;
-import net.runelite.client.input.KeyManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.http.api.item.ItemEquipmentStats;
 import net.runelite.http.api.item.ItemStats;
+import net.runelite.client.events.ConfigChanged;
+import java.awt.Color;
+import java.awt.Dimension;
+import net.runelite.client.input.KeyManager;
 
-import javax.inject.Inject;
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 
 @PluginDescriptor(
-	name = "<html><font color=#b82584>[J] AnimationCD"
+		name = "<html><font color=#b82584>[J] Animation Cooldown",
+		description = "Overlays a tick counter for player attacks",
+		enabledByDefault = false
 )
 public class AnimationCDPlugin extends Plugin
 {
